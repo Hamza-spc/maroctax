@@ -429,6 +429,15 @@ git push origin main
 
 **Done when:** Spring app gets a bean with one dependency; Angular/Flutter apps render payslip from package imports.
 
+### Phase 5 gate (run before Phase 6)
+
+```bash
+cd java/maroctax-spring-boot-starter && mvn test
+cd ../../typescript/maroctax && npm test
+cd ../../angular/maroctax-angular && npm test && npm run build
+cd ../../dart/maroctax_flutter && flutter test
+```
+
 ---
 
 ## Phase 6 — Tier 2: Product layer (Day 3–4)
