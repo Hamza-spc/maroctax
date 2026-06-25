@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { MaroctaxPayslipComponent, MaroctaxSimulatorComponent } from 'maroctax-angular';
+import { MaroctaxPayslipComponent } from './components/maroctax-payslip.component';
+import { MaroctaxSimulatorComponent } from './components/maroctax-simulator.component';
 
 @Component({
   selector: 'app-root',
