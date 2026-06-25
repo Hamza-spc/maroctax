@@ -244,6 +244,14 @@ git push origin main
 
 **Done when:** TypeScript is the reference; fixtures pass; API frozen for ports and integrations.
 
+### Phase 2 gate (run before Phase 3)
+
+```bash
+cd typescript/maroctax && npm run build && npm test
+```
+
+**Git (after gate passes):** step 2.5 commit.
+
 ---
 
 ## Phase 3 — Java core (Day 2, morning)
