@@ -1,6 +1,6 @@
 {
   "name": "maroctax",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Moroccan payroll calculation library — IR, CNSS, AMO, and more",
   "license": "MIT",
   "type": "module",
@@ -15,10 +15,30 @@
   "files": [
     "dist"
   ],
+  "keywords": [
+    "morocco",
+    "payroll",
+    "salary",
+    "cnss",
+    "amo",
+    "ir",
+    "tax",
+    "maroctax"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hamza-spc/maroctax.git",
+    "directory": "typescript/maroctax"
+  },
+  "homepage": "https://github.com/Hamza-spc/maroctax#readme",
+  "bugs": {
+    "url": "https://github.com/Hamza-spc/maroctax/issues"
+  },
   "scripts": {
     "build": "tsc",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "test:step": "npm test"
+    "test:step": "npm test",
+    "prepublishOnly": "npm run build && npm test"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
