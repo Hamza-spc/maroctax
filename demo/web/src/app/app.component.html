@@ -1,24 +1,26 @@
 <main class="page">
   <header class="hero">
-    <p class="eyebrow">Open source · Morocco · 2025 fiscal rules</p>
+    <p class="eyebrow">For Moroccan SMEs & startups · 2025 fiscal rules</p>
     <h1>maroctax</h1>
     <p class="lead">
-      Moroccan payroll calculator — CNSS, AMO, IR, net salary, and employer cost.
-      Built in TypeScript, Java, and Dart.
+      Hiring & payroll planner — turn salary expectations into offers, team budgets, and
+      accountant-ready exports. CNSS, AMO, IR, net salary, and employer cost.
     </p>
     <div class="links">
       <a [href]="githubUrl" target="_blank" rel="noopener">GitHub</a>
       <span class="sep">·</span>
-      <span>{{ apiDocsHint }}</span>
+      <a routerLink="/about">Rules & limitations</a>
     </div>
   </header>
 
-  <section class="grid">
-    <maroctax-simulator />
-    <div>
-      <p class="card-label">Example payslip (8 000 MAD · 2 dependents)</p>
-      <maroctax-payslip [gross]="8000" [dependents]="2" />
-    </div>
+  <nav class="nav">
+    <a routerLink="/offer" routerLinkActive="active">Offer builder</a>
+    <a routerLink="/planner" routerLinkActive="active">Team planner</a>
+    <a routerLink="/about" routerLinkActive="active">About</a>
+  </nav>
+
+  <section class="content">
+    <router-outlet />
   </section>
 
   <footer>

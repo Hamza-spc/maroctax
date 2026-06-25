@@ -33,7 +33,12 @@
 
 **https://hamza-spc.github.io/maroctax/**
 
-Interactive salary simulator with CNSS, AMO, IR, net salary, employer cost, and raise comparison.
+Founder-focused payroll planner for Moroccan SMEs and startups:
+
+- **Offer builder** — target net → recommended gross + employer cost
+- **Team planner** — multi-employee hiring budget with monthly forecast
+- **Exports** — CSV monthly summary + PDF payslip estimates
+- **About** — rules version, sources, scope & limitations
 
 ## Install
 
