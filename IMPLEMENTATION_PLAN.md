@@ -521,6 +521,13 @@ git push origin main
 
 **Done when:** Demo URL live in README; API returns fixture-accurate JSON; Swagger documents all endpoints.
 
+### Phase 6 gate (run before Phase 7)
+
+```bash
+cd demo/web && npm ci && npm run build
+cd ../../java/maroctax-api && mvn test
+```
+
 ---
 
 ## Phase 7 — Tier 3: CI/CD, polish & publish (Day 4)
