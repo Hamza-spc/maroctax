@@ -1,13 +1,20 @@
 {
   "name": "maroctax-angular",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Angular components for Moroccan payroll — payslip and salary simulator",
   "license": "MIT",
+  "keywords": ["angular", "morocco", "payroll", "maroctax"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hamza-spc/maroctax.git",
+    "directory": "angular/maroctax-angular"
+  },
+  "homepage": "https://github.com/Hamza-spc/maroctax#readme",
   "peerDependencies": {
     "@angular/common": "^17.0.0 || ^18.0.0 || ^19.0.0",
     "@angular/core": "^17.0.0 || ^18.0.0 || ^19.0.0",
     "@angular/forms": "^17.0.0 || ^18.0.0 || ^19.0.0",
-    "maroctax": "0.1.0"
+    "maroctax": "^1.0.0"
   },
   "dependencies": {
     "tslib": "^2.8.1"
@@ -15,7 +22,8 @@
   "sideEffects": false,
   "scripts": {
     "build": "ng-packagr -p ng-package.json",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "prepublishOnly": "npm run build && npm test"
   },
   "devDependencies": {
     "@angular/common": "^19.2.0",

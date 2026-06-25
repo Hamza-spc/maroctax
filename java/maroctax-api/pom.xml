@@ -13,7 +13,7 @@
 
   <groupId>ma.maroctax</groupId>
   <artifactId>maroctax-api</artifactId>
-  <version>0.1.0</version>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
 
   <name>maroctax-api</name>
@@ -28,7 +28,7 @@
     <dependency>
       <groupId>ma.maroctax</groupId>
       <artifactId>maroctax-spring-boot-starter</artifactId>
-      <version>0.1.0</version>
+      <version>1.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>

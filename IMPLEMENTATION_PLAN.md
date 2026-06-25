@@ -638,6 +638,26 @@ git push origin main
 
 **Done when:** CI green on `main`; `v1.0.0` tag triggers full publish; README links demo + API; all badges live.
 
+### Phase 7 gate (project complete)
+
+```bash
+# TypeScript
+cd typescript/maroctax && npm ci && npm test && npm run build
+
+# Java
+cd java/maroctax-core && mvn -B test
+cd ../maroctax-spring-boot-starter && mvn -B install -DskipTests -f ../maroctax-core/pom.xml && mvn -B test
+cd ../maroctax-api && mvn -B install -DskipTests -f ../maroctax-core/pom.xml && mvn -B install -DskipTests -f ../maroctax-spring-boot-starter/pom.xml && mvn -B test
+
+# Dart / Flutter
+cd ../../dart/maroctax && dart pub get && dart analyze && dart test
+cd ../maroctax_flutter && flutter test
+
+# Angular + demo
+cd ../../angular/maroctax-angular && npm ci && npm test && npm run build
+cd ../../demo/web && npm ci && npm run build
+```
+
 ---
 
 ## Phase summary
