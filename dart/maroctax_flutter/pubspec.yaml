@@ -1,0 +1,23 @@
+name: maroctax_flutter
+description: Flutter widgets for Moroccan payroll — payslip card and salary simulator
+version: 1.0.0
+repository: https://github.com/Hamza-spc/maroctax
+homepage: https://github.com/Hamza-spc/maroctax
+issue_tracker: https://github.com/Hamza-spc/maroctax/issues
+
+environment:
+  sdk: ^3.5.0
+  flutter: ">=3.24.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  maroctax:
+    path: ../maroctax
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:

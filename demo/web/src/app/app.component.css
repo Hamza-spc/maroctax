@@ -1,0 +1,124 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+  color: #0f172a;
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: #64748b;
+  margin: 0 0 0.5rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 0 0.75rem;
+  font-weight: 800;
+}
+
+.lead {
+  max-width: 42rem;
+  margin: 0 auto 1rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.links {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.links a {
+  color: #0f766e;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.sep {
+  margin: 0 0.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin: 0 auto 1.5rem;
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  background: rgba(255, 255, 255, 0.7);
+  color: #0f172a;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.nav a:hover {
+  border-color: #94a3b8;
+}
+
+.nav a.active {
+  border-color: #0f766e;
+  color: #0f766e;
+}
+
+.content {
+  display: block;
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.card-label {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0 0 0.75rem;
+}
+
+@media (min-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+footer {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+footer a {
+  color: #0f766e;
+}

@@ -1,0 +1,13 @@
+name: maroctax
+description: Moroccan payroll calculation library — IR, CNSS, AMO, and more
+version: 1.0.0
+repository: https://github.com/Hamza-spc/maroctax
+homepage: https://github.com/Hamza-spc/maroctax
+issue_tracker: https://github.com/Hamza-spc/maroctax/issues
+
+environment:
+  sdk: ^3.5.0
+
+dev_dependencies:
+  test: ^1.25.8
+  lints: ^5.1.1

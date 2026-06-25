@@ -1,0 +1,29 @@
+<main class="page">
+  <header class="hero">
+    <p class="eyebrow">For Moroccan SMEs & startups · 2025 fiscal rules</p>
+    <h1>maroctax</h1>
+    <p class="lead">
+      Hiring & payroll planner — turn salary expectations into offers, team budgets, and
+      accountant-ready exports. CNSS, AMO, IR, net salary, and employer cost.
+    </p>
+    <div class="links">
+      <a [href]="githubUrl" target="_blank" rel="noopener">GitHub</a>
+      <span class="sep">·</span>
+      <a routerLink="/about">Rules & limitations</a>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <a routerLink="/offer" routerLinkActive="active">Offer builder</a>
+    <a routerLink="/planner" routerLinkActive="active">Team planner</a>
+    <a routerLink="/about" routerLinkActive="active">About</a>
+  </nav>
+
+  <section class="content">
+    <router-outlet />
+  </section>
+
+  <footer>
+  <p>MIT License · <a [href]="githubUrl" target="_blank" rel="noopener">Hamza-spc/maroctax</a></p>
+  </footer>
+</main>

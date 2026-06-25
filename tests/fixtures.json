@@ -1,0 +1,7 @@
+[
+  { "gross": 3500,  "dependents": 0, "expectedNet": 3264.10 },
+  { "gross": 5000,  "dependents": 1, "expectedNet": 4627.46 },
+  { "gross": 8000,  "dependents": 2, "expectedNet": 7192.34 },
+  { "gross": 10000, "dependents": 0, "expectedNet": 8723.95 },
+  { "gross": 20000, "dependents": 3, "expectedNet": 15400.48 }
+]
