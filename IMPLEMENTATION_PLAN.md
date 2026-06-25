@@ -14,7 +14,15 @@ Don't ship "a library." Ship an **ecosystem**:
 | **Tier 2 — Product** | Live demo web app recruiters click; public REST API any language can call |
 | **Tier 3 — DevOps** | CI on every push; one `git tag v1.0.1` → all registries publish automatically |
 
-Each step ends with **git add → commit → push** so `main` stays deployable and history is easy to bisect.
+Each step ends with **test → git add → commit → push**. After every phase, run the **phase gate** checklist before starting the next phase.
+
+### Testing discipline
+
+| When | What to run |
+|------|-------------|
+| **After every step** | Step-specific verification (unit tests, build, lint, or structural checks — see each step) |
+| **After every phase** | Full phase gate: all step checks + integration smoke test for that phase |
+| **Before next phase** | Phase gate must be green — do not proceed if it fails |
 
 ---
 
@@ -83,6 +91,15 @@ maroctax/
 └── tests/
 ```
 
+**Test (step 1.1):**
+```bash
+# All package roots must exist
+test -d java/maroctax-core && test -d java/maroctax-spring-boot-starter && \
+test -d java/maroctax-api && test -d typescript/maroctax && \
+test -d angular/maroctax-angular && test -d dart/maroctax && \
+test -d dart/maroctax_flutter && test -d demo/web && test -d tests
+```
+
 **Git:**
 ```bash
 git add java/ typescript/ angular/ dart/ demo/ tests/
@@ -104,6 +121,21 @@ Single source of truth for cross-language parity **and** REST API contract tests
 ]
 ```
 
+**Test (step 1.2):**
+```bash
+# Valid JSON, exactly 5 cases, required fields present
+python3 -c "
+import json, sys
+with open('tests/fixtures.json') as f:
+    data = json.load(f)
+assert len(data) == 5, f'expected 5 fixtures, got {len(data)}'
+for i, row in enumerate(data):
+    for key in ('gross', 'dependents', 'expectedNet'):
+        assert key in row, f'fixture {i} missing {key}'
+print('fixtures.json OK:', len(data), 'cases')
+"
+```
+
 **Git:**
 ```bash
 git add tests/fixtures.json
@@ -111,7 +143,18 @@ git commit -m "test: add shared payroll fixtures for cross-language and API pari
 git push origin main
 ```
 
-**Done when:** Skeleton exists; fixtures committed; no engine code yet.
+### Phase 1 gate (run before Phase 2)
+
+```bash
+# 1. Skeleton dirs
+test -d java/maroctax-core && test -d typescript/maroctax && test -d dart/maroctax && \
+test -d angular/maroctax-angular && test -d demo/web
+
+# 2. Fixtures valid
+python3 -c "import json; json.load(open('tests/fixtures.json')); print('phase 1 gate: PASS')"
+```
+
+**Done when:** Skeleton exists; fixtures committed and validated; phase gate green; no engine code yet.
 
 ---
 
