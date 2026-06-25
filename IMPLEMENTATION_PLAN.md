@@ -304,6 +304,12 @@ git push origin main
 
 **Done when:** Java core matches TypeScript for all fixtures.
 
+### Phase 3 gate (run before Phase 4)
+
+```bash
+cd java/maroctax-core && mvn test
+```
+
 ---
 
 ## Phase 4 — Dart core (Day 2–3)
