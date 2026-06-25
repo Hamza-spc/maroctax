@@ -352,6 +352,12 @@ git push origin main
 
 **Done when:** Dart core matches TypeScript for all fixtures.
 
+### Phase 4 gate (run before Phase 5)
+
+```bash
+cd dart/maroctax && dart pub get && dart analyze && dart test
+```
+
 ---
 
 ## Phase 5 — Tier 1: Framework integrations (Day 3)
