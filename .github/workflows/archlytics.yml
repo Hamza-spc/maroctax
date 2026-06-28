@@ -1,0 +1,21 @@
+name: Archlytics
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  architecture:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: Hamza-spc/Archlytics/action@main
+        with:
+          fail-on: high
+          skip-ai: true
