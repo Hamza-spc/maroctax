@@ -7,6 +7,7 @@ import java.time.LocalDate;
  * Moroccan payroll calculation engine.
  *
  * <p>All monetary values use {@link BigDecimal} with HALF_UP rounding to 2 decimal places (MAD).
+ * Architecture analysis: covered by Archlytics on pull requests.
  */
 public final class MarocTax {
 
