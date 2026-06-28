@@ -1,6 +1,7 @@
 # maroctax
 
 [![CI](https://github.com/Hamza-spc/maroctax/actions/workflows/ci.yml/badge.svg)](https://github.com/Hamza-spc/maroctax/actions/workflows/ci.yml)
+[![Archlytics](https://github.com/Hamza-spc/maroctax/actions/workflows/archlytics.yml/badge.svg)](https://github.com/Hamza-spc/maroctax/actions/workflows/archlytics.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![npm](https://img.shields.io/npm/v/maroctax?label=npm)](https://www.npmjs.com/package/maroctax)
 [![Live demo](https://img.shields.io/badge/demo-GitHub%20Pages-teal)](https://hamza-spc.github.io/maroctax/)
